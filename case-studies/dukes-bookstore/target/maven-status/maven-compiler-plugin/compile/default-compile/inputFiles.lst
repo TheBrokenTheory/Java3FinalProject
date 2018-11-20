@@ -3,6 +3,7 @@ E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\components\AreaComponent.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\exception\BookNotFoundException.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\exception\OrderException.java
+E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\entity\StateTax.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\components\MapComponent.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\ejb\ConfigBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\listeners\AreaSelectedEvent.java
@@ -16,6 +17,7 @@ E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\CatalogBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\LocaleBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\ShoppingCartItem.java
+E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\ejb\StateTaxRequestBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\listeners\LinkBookChangeListener.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\entity\Book.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\converters\CreditCardConverter.java
@@ -23,4 +25,6 @@ E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\ShowCartBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\renderers\AreaRenderer.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\listeners\NameChanged.java
+E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\ejb\StateTaxConfigBean.java
+E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\OrderTotalsBean.java
 E:\School\Java3\Final Project\Java3FinalProject\case-studies\dukes-bookstore\src\main\java\javaeetutorial\dukesbookstore\web\managedbeans\AbstractBean.java

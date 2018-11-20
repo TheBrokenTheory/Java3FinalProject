@@ -124,7 +124,12 @@ public class CashierBean extends AbstractBean {
     public void setStringProperty(String stringProperty) {
         this.stringProperty = stringProperty;
     }
-
+    
+    public String viewOrderTotals()
+    {
+        return "bookOrderTotals";
+    }
+    
     public String submit() {
         // Calculate and save the ship date
         int days = Integer.valueOf(shippingOption).intValue();

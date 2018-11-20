@@ -2,6 +2,7 @@ javaeetutorial\dukesbookstore\renderers\AreaRenderer.class
 javaeetutorial\dukesbookstore\web\managedbeans\CatalogBean.class
 javaeetutorial\dukesbookstore\web\managedbeans\BookDetailsBean.class
 javaeetutorial\dukesbookstore\ejb\BookRequestBean.class
+javaeetutorial\dukesbookstore\ejb\StateTaxConfigBean.class
 javaeetutorial\dukesbookstore\components\AreaComponent$PropertyKeys.class
 javaeetutorial\dukesbookstore\listeners\LinkBookChangeListener.class
 javaeetutorial\dukesbookstore\listeners\NameChanged.class
@@ -10,6 +11,7 @@ javaeetutorial\dukesbookstore\exception\BookNotFoundException.class
 javaeetutorial\dukesbookstore\exception\BooksNotFoundException.class
 javaeetutorial\dukesbookstore\renderers\MapRenderer.class
 javaeetutorial\dukesbookstore\ejb\ConfigBean.class
+javaeetutorial\dukesbookstore\entity\StateTax.class
 javaeetutorial\dukesbookstore\entity\Book.class
 javaeetutorial\dukesbookstore\exception\OrderException.class
 javaeetutorial\dukesbookstore\web\managedbeans\CashierBean.class
@@ -22,7 +24,9 @@ javaeetutorial\dukesbookstore\web\managedbeans\ShoppingCart.class
 javaeetutorial\dukesbookstore\web\managedbeans\LocaleBean.class
 javaeetutorial\dukesbookstore\converters\CreditCardConverter.class
 javaeetutorial\dukesbookstore\listeners\QuantityChanged.class
+javaeetutorial\dukesbookstore\ejb\StateTaxRequestBean.class
 javaeetutorial\dukesbookstore\web\managedbeans\AbstractBean.class
 javaeetutorial\dukesbookstore\web\managedbeans\ShoppingCartItem.class
 javaeetutorial\dukesbookstore\components\MapComponent.class
+javaeetutorial\dukesbookstore\web\managedbeans\OrderTotalsBean.class
 javaeetutorial\dukesbookstore\listeners\MapBookChangeListener.class

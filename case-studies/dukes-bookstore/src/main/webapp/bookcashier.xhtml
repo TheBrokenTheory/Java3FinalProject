@@ -67,7 +67,20 @@
                         pattern="\d{16}|\d{4} \d{4} \d{4} \d{4}|\d{4}-\d{4}-\d{4}-\d{4}"/> 
                 </h:inputText>
                 <h:message styleClass="error-message" for="ccno"/>
-
+                
+                <!-- State Tax Selection -->
+                <h:outputLabel for="stateTax" value="State"/>
+                <h:selectOneMenu id="stateTax"
+                                 required="true"
+                                 value="#{cashierBean.shippingOption}">
+                    <f:selectItem itemValue="2"
+                                  itemLabel="GA"/>
+                    <f:selectItem itemValue="5"
+                                  itemLabel="#{bundle.NormalShip}"/>
+                    <f:selectItem itemValue="7"
+                                  itemLabel="#{bundle.SaverShip}"/>
+                </h:selectOneMenu>
+            
                 <!-- Shipping option -->
                 <h:outputLabel for="shippingOption" value="#{bundle.Shipping}"/>
                 <h:selectOneMenu id="shippingOption"
