@@ -8,6 +8,8 @@
 package javaeetutorial.dukesbookstore.ejb;
 
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javaeetutorial.dukesbookstore.entity.StateTax;
 import javax.ejb.EJBException;
 import javax.ejb.Stateful;
@@ -19,6 +21,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateful
 public class StateTaxRequestBean {
+    
 
     @PersistenceContext
     private EntityManager em;
@@ -28,8 +31,8 @@ public class StateTaxRequestBean {
 
     public void createState(String stateCode, Double taxRate) {
         try {
-            StateTax state = new StateTax(stateCode,taxRate);       
-            em.persist(state);
+            StateTax state = new StateTax(stateCode,taxRate);
+            em.persist(state); 
         } catch (Exception ex) {
             throw new EJBException(ex.getMessage());
         }

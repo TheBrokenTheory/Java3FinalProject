@@ -18,10 +18,10 @@ import javax.validation.constraints.NotNull;
  * <p>Entity class for bookstore example.</p>
  */
 @Entity
-@Table(name = "WEB_BOOKSTORE_BOOKS")
+@Table(name = "WEB_BOOKSTORE_STATES")
 @NamedQuery(
         name = "findState",
-        query = "SELECT b FROM StateTax b ORDER BY b.stateCode")
+        query = "SELECT s FROM StateTax s ORDER BY s.stateCode")
 public class StateTax implements Serializable {
 
     private static final long serialVersionUID = -4146681491856848089L;
