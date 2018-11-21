@@ -68,16 +68,16 @@
                 </h:inputText>
                 <h:message styleClass="error-message" for="ccno"/>
                 
-                <!-- State Tax Selection -->
-               <h:outputLabel for="taxOption" value="Tax Rates"/>
-                <h:selectOneMenu id="taxOption"
+               <!-- State Tax Selection -->
+                <h:outputLabel for="stateTaxOption" value="#{bundle.Tax}"/>
+                <h:selectOneMenu id="stateTaxOption"
                                  required="true"
                                  value="#{cashierBean.stateTaxOption}">
                     <f:selectItems value="#{cashierBean.stateTax}" var="state"
                                    itemLabel="#{state.stateCode}"
                                    itemValue="#{state.taxRate}" />
                 </h:selectOneMenu>
-                <h:message styleClass="error-message" for="stateTax"/>
+                <h:message styleClass="error-message" for="stateTaxOption"/>
             
                 <!-- Shipping option -->
                 <h:outputLabel for="shippingOption" value="#{bundle.Shipping}"/>

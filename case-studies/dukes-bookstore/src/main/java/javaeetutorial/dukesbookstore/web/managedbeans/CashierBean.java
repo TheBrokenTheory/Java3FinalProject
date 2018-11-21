@@ -31,9 +31,18 @@ public class CashierBean extends AbstractBean {
 
     private static final long serialVersionUID = -9221440716172304017L;
     @EJB
+    BookRequestBean bookRequestBean;
+    
+    @EJB
     StateTaxRequestBean stateTaxRequestBean;
     private double stateTaxOption;
-    BookRequestBean bookRequestBean;
+    
+    //For comfirmation page variables to be displayed.
+    double subtotal = 0.00;
+    double taxRate = 0.00;
+    double shippingCost = 0.00;
+    double finalTotal = 0.00;
+    
     private String name = null;
     private String creditCardNumber = null;
     private Date shipDate;
@@ -114,6 +123,44 @@ public class CashierBean extends AbstractBean {
     {
         this.stateTaxOption = stateTaxOption;
     }
+    //Getters for confirmation page variables
+    public double getSubtotal() 
+    {
+        return subtotal;
+    }
+    
+    public double getTaxRate() 
+    {
+        //Calculate the tax rate based on the selected StateTax object
+        taxRate = subtotal * stateTaxOption;
+        return taxRate;
+    }
+    
+    public double getShippingCost() 
+    {
+        //Calculate shipping based on the selected option
+        int selectedShipping = Integer.parseInt(shippingOption); 
+        
+        switch (selectedShipping) 
+        {
+            case 2:
+                this.shippingCost = 25.82;
+                return shippingCost;
+            case 5:
+                this.shippingCost = 10.76;
+                return shippingCost;
+            default:
+                this.shippingCost = 5.25;
+                return shippingCost;
+        }
+    }
+    
+    public double getFinalTotal() 
+    {
+        //Find the total
+        this.finalTotal = subtotal + taxRate + shippingCost;
+        return finalTotal;
+    }
 
     //End State Tax
     public UIOutput getSpecialOfferText() {
@@ -148,10 +195,7 @@ public class CashierBean extends AbstractBean {
         this.stringProperty = stringProperty;
     }
     
-    public String viewOrderTotals()
-    {
-        return "bookOrderTotals";
-    }
+
     
     public String submit() {
         // Calculate and save the ship date
@@ -175,10 +219,12 @@ public class CashierBean extends AbstractBean {
             } catch (OrderException ex) {
                 return "bookordererror";
             }
-
+            
+            this.subtotal = cart.getTotal();
+            
             cart.clear();
 
-            return ("bookreceipt");
+            return ("bookOrderTotals");
         }
     }
 }
