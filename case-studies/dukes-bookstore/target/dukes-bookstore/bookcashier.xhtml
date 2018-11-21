@@ -69,17 +69,15 @@
                 <h:message styleClass="error-message" for="ccno"/>
                 
                 <!-- State Tax Selection -->
-                <h:outputLabel for="stateTax" value="State"/>
-                <h:selectOneMenu id="stateTax"
+               <h:outputLabel for="taxOption" value="Tax Rates"/>
+                <h:selectOneMenu id="taxOption"
                                  required="true"
-                                 value="#{cashierBean.shippingOption}">
-                    <f:selectItem itemValue="2"
-                                  itemLabel="GA"/>
-                    <f:selectItem itemValue="5"
-                                  itemLabel="#{bundle.NormalShip}"/>
-                    <f:selectItem itemValue="7"
-                                  itemLabel="#{bundle.SaverShip}"/>
+                                 value="#{cashierBean.stateTaxOption}">
+                    <f:selectItems value="#{cashierBean.stateTax}" var="state"
+                                   itemLabel="#{state.stateCode}"
+                                   itemValue="#{state.taxRate}" />
                 </h:selectOneMenu>
+                <h:message styleClass="error-message" for="stateTax"/>
             
                 <!-- Shipping option -->
                 <h:outputLabel for="shippingOption" value="#{bundle.Shipping}"/>

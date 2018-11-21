@@ -8,9 +8,9 @@
 package javaeetutorial.dukesbookstore.ejb;
 
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.List;
 import javaeetutorial.dukesbookstore.entity.StateTax;
+import javaeetutorial.dukesbookstore.exception.BooksNotFoundException;
 import javax.ejb.EJBException;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
@@ -21,11 +21,10 @@ import javax.persistence.PersistenceContext;
  */
 @Stateful
 public class StateTaxRequestBean {
-    
 
     @PersistenceContext
     private EntityManager em;
-            
+    
     public StateTaxRequestBean() throws Exception {
     }
 
@@ -38,6 +37,9 @@ public class StateTaxRequestBean {
         }
     }
     
- 
-    
+    public List<StateTax> getStates()
+    {
+        return (List<StateTax>) em.createNamedQuery("findStates").getResultList();
+    }
+   
 }

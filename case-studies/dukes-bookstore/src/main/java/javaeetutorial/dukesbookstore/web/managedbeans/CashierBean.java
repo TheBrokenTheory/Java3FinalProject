@@ -9,7 +9,10 @@ package javaeetutorial.dukesbookstore.web.managedbeans;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import javaeetutorial.dukesbookstore.ejb.BookRequestBean;
+import javaeetutorial.dukesbookstore.ejb.StateTaxRequestBean;
+import javaeetutorial.dukesbookstore.entity.StateTax;
 import javaeetutorial.dukesbookstore.exception.OrderException;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
@@ -28,6 +31,8 @@ public class CashierBean extends AbstractBean {
 
     private static final long serialVersionUID = -9221440716172304017L;
     @EJB
+    StateTaxRequestBean stateTaxRequestBean;
+    private double stateTaxOption;
     BookRequestBean bookRequestBean;
     private String name = null;
     private String creditCardNumber = null;
@@ -92,7 +97,25 @@ public class CashierBean extends AbstractBean {
     public String getShippingOption() {
         return this.shippingOption;
     }
+    
+    // State Tax
+    public List<StateTax> getStateTax() 
+    {
+        return stateTaxRequestBean.getStates();
+    }
+    
+    //State Tax option getter and setter
+    public double getStateTaxOption() 
+    {
+        return stateTaxOption;
+    }
+    
+    public void setStateTaxOption(double stateTaxOption) 
+    {
+        this.stateTaxOption = stateTaxOption;
+    }
 
+    //End State Tax
     public UIOutput getSpecialOfferText() {
         return this.specialOfferText;
     }

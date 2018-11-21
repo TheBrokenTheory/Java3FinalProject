@@ -18,9 +18,9 @@ import javax.validation.constraints.NotNull;
  * <p>Entity class for bookstore example.</p>
  */
 @Entity
-@Table(name = "WEB_BOOKSTORE_STATES")
+@Table(name = "STATE_TAX")
 @NamedQuery(
-        name = "findState",
+        name = "findStates",
         query = "SELECT s FROM StateTax s ORDER BY s.stateCode")
 public class StateTax implements Serializable {
 
