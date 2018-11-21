@@ -7,18 +7,8 @@
  */
 package javaeetutorial.dukesbookstore.ejb;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javaeetutorial.dukesbookstore.entity.Book;
+
 import javaeetutorial.dukesbookstore.entity.StateTax;
-import javaeetutorial.dukesbookstore.exception.BookNotFoundException;
-import javaeetutorial.dukesbookstore.exception.BooksNotFoundException;
-import javaeetutorial.dukesbookstore.exception.OrderException;
-import javaeetutorial.dukesbookstore.web.managedbeans.ShoppingCart;
-import javaeetutorial.dukesbookstore.web.managedbeans.ShoppingCartItem;
 import javax.ejb.EJBException;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
