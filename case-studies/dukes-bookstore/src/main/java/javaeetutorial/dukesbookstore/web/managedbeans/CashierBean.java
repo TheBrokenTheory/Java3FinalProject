@@ -30,6 +30,7 @@ import javax.inject.Named;
 public class CashierBean extends AbstractBean {
 
     private static final long serialVersionUID = -9221440716172304017L;
+    
     @EJB
     BookRequestBean bookRequestBean;
     
