@@ -46,7 +46,11 @@ public class CashierBean extends AbstractBean {
     
     private String name = null;
     private String creditCardNumber = null;
-    private Date shipDate;
+    
+    //Made shipdate static
+    //Had bug that wouldn't display on bookreciept
+    //after confirming the costs.
+    private static Date shipDate;
     private String shippingOption = "2";
     UIOutput specialOfferText = null;
     UISelectBoolean specialOffer = null;
@@ -132,14 +136,14 @@ public class CashierBean extends AbstractBean {
     
     public double getTaxRate() 
     {
-        //Calculate the tax rate based on the selected StateTax object
+        //Calculate the tax rate based on selected StateTax object
         taxRate = subtotal * stateTaxOption;
         return taxRate;
     }
     
+    //Calculate shipping based on selected option
     public double getShippingCost() 
-    {
-        //Calculate shipping based on the selected option
+    {  
         int selectedShipping = Integer.parseInt(shippingOption); 
         
         switch (selectedShipping) 
@@ -156,9 +160,9 @@ public class CashierBean extends AbstractBean {
         }
     }
     
+    //Calculate grand total
     public double getFinalTotal() 
     {
-        //Find the total
         this.finalTotal = subtotal + taxRate + shippingCost;
         return finalTotal;
     }
@@ -195,8 +199,6 @@ public class CashierBean extends AbstractBean {
     public void setStringProperty(String stringProperty) {
         this.stringProperty = stringProperty;
     }
-    
-
     
     public String submit() {
         // Calculate and save the ship date
